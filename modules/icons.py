@@ -4,9 +4,9 @@ import sublime
 _plugin_name = "Git Conflict Resolver"
 _icon_folder = "/".join([_plugin_name, "gutter"])
 _icons = {
-    "ours": "ours",
+    "head": "head",
     "ancestor": "ancestor",
-    "theirs": "theirs"
+    "current": "current"
 }
 
 

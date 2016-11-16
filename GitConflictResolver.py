@@ -76,14 +76,20 @@ def highlight_conflicts(view):
         draw.visible()
     )
 
-    highlight_conflict_group(view, 'ours')
+    highlight_conflict_group(view, 'head')
     highlight_conflict_group(view, 'ancestor')
-    highlight_conflict_group(view, 'theirs')
+    highlight_conflict_group(view, 'current')
 
 
 def extract(view, region, keep):
     conflict_text = view.substr(region)
     match = conflict_re.CONFLICT_REGEX.search(conflict_text)
+
+    if keep == "both":
+        return conflict_re.keepBoth(conflict_text)
+
+    if keep == "swap":
+        return conflict_re.swap(conflict_text)
 
     # If we didn't matched the group return None
     if not match.group(keep):
@@ -91,7 +97,6 @@ def extract(view, region, keep):
         return None
 
     return conflict_re.CONFLICT_REGEX.sub(r'\g<' + keep + '>', conflict_text)
-
 
 class FindNextConflict(sublime_plugin.TextCommand):
     def run(self, edit):

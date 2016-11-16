@@ -1,0 +1,8 @@
+<<<<<<< f3ddb5606e3a7e2f28962f3c94739521e63a5ada
+    text = "This text from the HEAD"
+    text2 = "More stuff from the HEAD"
+=======
+    our_branch = "This text from our branch"
+    our_branch += "More from our branch"
+    our_branch += "More from our branch"
+>>>>>>> FEAT-42: Added ability to filter by admin
