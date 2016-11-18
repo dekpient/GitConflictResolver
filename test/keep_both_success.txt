@@ -1,0 +1,5 @@
+    text = "This text from the HEAD"
+    text2 = "More stuff from the HEAD"
+    our_branch = "This text from our branch"
+    our_branch += "More from our branch"
+    our_branch += "More from our branch"

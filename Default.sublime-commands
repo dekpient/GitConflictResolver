@@ -4,17 +4,24 @@
         "command": "find_next_conflict"
     },
     {
-        "caption": "Git Conflict Resolver: Keep Theirs",
+        "caption": "Git Conflict Resolver: Keep Both",
         "command": "keep",
         "args": {
-            "keep": "theirs"
+            "keep": "both"
         }
     },
     {
-        "caption": "Git Conflict Resolver: Keep Ours",
+        "caption": "Git Conflict Resolver: Keep Current",
         "command": "keep",
         "args": {
-            "keep": "ours"
+            "keep": "current"
+        }
+    },
+    {
+        "caption": "Git Conflict Resolver: Keep Head",
+        "command": "keep",
+        "args": {
+            "keep": "head"
         }
     },
     {

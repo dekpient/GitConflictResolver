@@ -7,9 +7,10 @@ _default_settings = {
     "matching_scope": 'invalid',
     "fill_conflict_area": False,
     "outline_conflict_area": True,
-    "ours_gutter": True,
-    "ancestor_gutter": True,
-    "theirs_gutter": True,
+    "current_gutter": False,
+    "ancestor_gutter": False,
+    "both_gutter": False,
+    "head_gutter": False,
     "git_path": "git",
     "show_only_filenames": True
 }

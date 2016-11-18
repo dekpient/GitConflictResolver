@@ -1,0 +1,2 @@
+    text = "This text from the HEAD"
+    text2 = "More stuff from the HEAD"
