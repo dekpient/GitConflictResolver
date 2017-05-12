@@ -8,7 +8,6 @@ NO_NAMING_GROUPS_PATTERN = r"(?s)<{7}[^\n]*\n"\
 CONFLICT_REGEX = re.compile(r"(?s)<{7}[^\n]*\n"
                             "(?P<head>.*?)(?:\|{7}[^\n]*\n"
                             "(?P<ancestor>.*?))?={7}\n"
-                            "(?P<both>.*?)>{7}[^\n]*\n"
                             "(?P<current>.*?)>{7}[^\n]*\n")
 
 CONFLICT_MARKER_REGEX = {
