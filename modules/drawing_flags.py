@@ -12,7 +12,7 @@ def visible():
 
     flags = 0
     if _st_version < 3000:
-        # If fill is set then outline is ignored; ST2 doesn't provide a combination
+        # If fill then outline is ignored; ST2 doesn't provide a combination
         if not (fill or outline):
             flags = sublime.HIDDEN
         elif not fill and outline:

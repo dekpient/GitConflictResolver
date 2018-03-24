@@ -38,7 +38,8 @@ def find_conflict(view, begin=0):
 def highlight_conflict_group(view, group):
     scope = group + '_gutter'
     if settings.get(scope):
-        conflict_regions = view.find_all(conflict_re.CONFLICT_GROUP_REGEX[group])
+        conflict_regions = view.find_all(
+            conflict_re.CONFLICT_GROUP_REGEX[group])
 
         if not conflict_regions:
             return
@@ -98,6 +99,7 @@ def extract(view, region, keep):
 
     return conflict_re.CONFLICT_REGEX.sub(r'\g<' + keep + '>', conflict_text)
 
+
 class FindNextConflict(sublime_plugin.TextCommand):
     def run(self, edit):
         # Reload settings
@@ -105,7 +107,8 @@ class FindNextConflict(sublime_plugin.TextCommand):
 
         current_selection = self.view.sel()
 
-        # Use the end of the current selection for the search, or use 0 if nothing is selected
+        # Use the end of the current selection for the search,
+        # or use 0 if nothing is selected
         begin = 0
         if len(current_selection) > 0:
             begin = self.view.sel()[-1].end()
@@ -127,7 +130,8 @@ class Keep(sublime_plugin.TextCommand):
 
         current_selection = self.view.sel()
 
-        # Use the begin of the current selection for the search, or use 0 if nothing is selected
+        # Use the begin of the current selection for the search,
+        # or use 0 if nothing is selected
         begin = 0
         if len(current_selection) > 0:
             begin = current_selection[0].begin()
@@ -161,7 +165,8 @@ class ListConflictFiles(sublime_plugin.WindowCommand, git_mixin.GitMixin):
 
         conflict_files = self.get_conflict_files()
         if not conflict_files:
-            sublime.status_message(msgs.get('no_conflict_files_found', self.git_repo))
+            sublime.status_message(
+                msgs.get('no_conflict_files_found', self.git_repo))
             return
 
         self.show_quickpanel_selection(conflict_files)
@@ -213,7 +218,7 @@ class ListConflictFiles(sublime_plugin.WindowCommand, git_mixin.GitMixin):
     def open_files(self, *files):
         for file in files:
             # Workaround sublime issue #39 using sublime.set_timeout
-            # (open_file() does not set cursor when run from a quick panel callback)
+            # open_file doesn't set cursor when run from a quick panel callback
             sublime.set_timeout(
                 lambda file=file: init_view(self.window.open_file(file)),
                 0
