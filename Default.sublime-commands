@@ -11,17 +11,17 @@
         }
     },
     {
-        "caption": "Git Conflict Resolver: Keep Current",
+        "caption": "Git Conflict Resolver: Keep Theirs",
         "command": "keep",
         "args": {
-            "keep": "current"
+            "keep": "theirs"
         }
     },
     {
-        "caption": "Git Conflict Resolver: Keep Head",
+        "caption": "Git Conflict Resolver: Keep Ours",
         "command": "keep",
         "args": {
-            "keep": "head"
+            "keep": "ours"
         }
     },
     {
@@ -29,6 +29,27 @@
         "command": "keep",
         "args": {
             "keep": "ancestor"
+        }
+    },
+    {
+        "caption": "Git Conflict Resolver: Keep All",
+        "command": "keep",
+        "args": {
+            "keep": "all"
+        }
+    },
+    {
+        "caption": "Git Conflict Resolver: Keep Both - Swap",
+        "command": "keep",
+        "args": {
+            "keep": "swap"
+        }
+    },
+    {
+        "caption": "Git Conflict Resolver: Keep All - Swap",
+        "command": "keep",
+        "args": {
+            "keep": "all_swap"
         }
     },
     {

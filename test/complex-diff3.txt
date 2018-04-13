@@ -1,0 +1,32 @@
+hello world
+https://stackoverflow.com/questions/16990657/git-merge-diff3-style-need-explanation
+
+<<<<<<< HEAD
+    aaaaaa
+||||||| merged common ancestors
+    dddddd
+<<<<<<< HEAD
+    eeeeee
+||||||| merged common ancestors
+    ffffff
+||||||| merged common ancestors
+    gggggg
+=======
+>>>>>>> Temporary merge branch 2
+=======
+    hhhhhh
+>>>>>>> mybranch
+hekeke
+
+herethere
+<<<<<<< HEAD
+Hello there
+hello
+||||||| merged common ancestors
+Hello there
+=======
+
+this is another branch
+are you alright?
+>>>>>>> feature/boo
+u

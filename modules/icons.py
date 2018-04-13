@@ -1,12 +1,12 @@
 import sublime
+from . import settings
 
 
-_plugin_name = "Git Conflict Resolver"
-_icon_folder = "/".join([_plugin_name, "gutter"])
+_icon_folder = "/".join([settings.PLUGIN_NAME, "gutter"])
 _icons = {
-    "head": "head",
-    "ancestor": "ancestor",
-    "current": "current"
+    "ours": "left",
+    "ancestor": "dash",
+    "theirs": "right"
 }
 
 

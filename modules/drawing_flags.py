@@ -27,11 +27,4 @@ def visible():
 
 
 def hidden():
-    flags = 0
-    if _st_version < 3000:
-        flags = sublime.HIDDEN
-    else:
-        flags = (sublime.DRAW_NO_FILL |
-                 sublime.DRAW_NO_OUTLINE)
-
-    return (flags | sublime.HIDE_ON_MINIMAP)
+    return (sublime.HIDDEN | sublime.HIDE_ON_MINIMAP)
